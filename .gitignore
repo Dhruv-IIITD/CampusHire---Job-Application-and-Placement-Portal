@@ -1,0 +1,53 @@
+# =========================
+# GENERAL
+# =========================
+.DS_Store
+.env
+.env.*
+*.log
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# =========================
+# NODE / REACT (VITE)
+# =========================
+client/node_modules/
+client/dist/
+client/.vite/
+client/.env
+client/.env.*
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
+# =========================
+# SPRING BOOT / MAVEN
+# =========================
+server/target/
+server/.mvn/wrapper/maven-wrapper.jar
+server/.mvn/wrapper/maven-wrapper.properties
+
+# Logs
+server/*.log
+
+# =========================
+# JAVA
+# =========================
+*.class
+*.jar
+*.war
+*.ear
+
+# =========================
+# IDE FILES
+# =========================
+*.iml
+*.ipr
+*.iws
+
+# =========================
+# OS FILES
+# =========================
+Thumbs.db

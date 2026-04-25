@@ -346,31 +346,4 @@ Job-Application-System/
 └── README.md
 ```
 
-## 16. Screenshots
-
-Add screenshots here after running the project locally:
-
-- `Landing Page` - placeholder
-- `Student Dashboard` - placeholder
-- `Job Listing Page` - placeholder
-- `Job Details Page` - placeholder
-- `Application Tracker` - placeholder
-- `Recruiter Dashboard` - placeholder
-- `Applicants Management Page` - placeholder
-
-## 17. Future Improvements
-
-- Add email notifications for status updates
-- Add resume upload instead of resume link only
-- Add pagination and sorting for large job lists
-- Add company profile pages
-- Add interview scheduling workflow
-- Add admin analytics and placement reports
-- Add automated seed data for demo accounts and job postings
-
-## 18. Resume-Friendly Project Summary
-
-Built `CampusHire`, a full-stack placement portal using `Spring Boot`, `React`, `Redux Toolkit`, `Tailwind CSS`, and `PostgreSQL/H2`. Implemented role-based student and recruiter workflows, job posting and filtering, profile management, application tracking, recruiter dashboards, REST APIs, JWT authentication, validation, and a responsive recruiter-friendly UI suitable for final-year project presentation.
-#   C a m p u s H i r e - - - J o b - A p p l i c a t i o n - a n d - P l a c e m e n t - P o r t a l  
- #   C a m p u s H i r e - - - J o b - A p p l i c a t i o n - a n d - P l a c e m e n t - P o r t a l  
  

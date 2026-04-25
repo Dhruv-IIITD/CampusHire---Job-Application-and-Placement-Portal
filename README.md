@@ -226,9 +226,9 @@ README.md
 
 ---
 
-## 📸 Screenshots
+<!-- ## 📸 Screenshots
 
-*Add screenshots here after running locally*
+*Add screenshots here after running locally* -->
 
 ---
 

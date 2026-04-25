@@ -1,285 +1,193 @@
-# CampusHire - Job Application and Placement Portal
 
-CampusHire is a Spring Boot + React based placement portal designed as a polished, final-year student project. It helps students create placement-ready profiles, browse job and internship openings, apply to relevant roles, and track application progress. It also gives recruiters a simple dashboard to post jobs, review applicants, and update selection status.
+# 🚀 CampusHire – Job Application & Placement Portal
 
-## 1. Project Overview
+CampusHire is a **Spring Boot + React based placement portal** built as a polished **final-year student project**.
 
-CampusHire is built to simulate a realistic campus placement workflow without over-engineering the project like a large enterprise system. The application focuses on clarity, clean user flows, and recruiter-friendly presentation.
+It helps:
+- 🎓 Students create placement-ready profiles, explore jobs, and track applications  
+- 🏢 Recruiters post jobs, review candidates, and manage hiring workflows  
 
-## 2. Problem Statement
+---
 
-In many colleges, placement activity is handled through scattered forms, emails, and spreadsheets. Students often struggle to maintain a single updated profile and track job applications, while recruiters or placement coordinators need a simple way to publish opportunities and review applicants. CampusHire solves this by bringing both sides into one structured portal.
+## 📌 Project Overview
 
-## 3. Key Features
+CampusHire simulates a **real campus placement system** without unnecessary complexity.
 
-- Student registration and login
-- Recruiter registration and login
-- Student profile management with academic and resume details
-- Browse job and internship openings
-- Filter jobs by role, location, company, skills, job type, and compensation
-- View detailed job descriptions
-- Apply to a job with duplicate application prevention
-- Track application stages from `Applied` to `Selected`
-- Recruiter job posting and job management
-- Recruiter applicant review and status updates
-- Dashboard statistics for students and recruiters
-- Responsive and polished UI for laptop and mobile
+The focus is on:
+- Clean user experience  
+- Simple workflows  
+- Practical, real-world functionality  
 
-## 4. User Roles
+---
 
-- `Student`
-  Students create profiles, browse openings, apply to jobs, save interesting roles, and track application progress.
+## ❗ Problem Statement
 
-- `Recruiter`
-  Recruiters create job postings, manage their jobs, view applicants, and update application status.
+In many colleges:
+- Placement processes are scattered across **forms, emails, spreadsheets**
+- Students struggle to maintain a **single profile**
+- Recruiters lack a **centralized system**
 
-- `Admin`
-  The backend supports an `ADMIN` role for the same management capabilities as recruiters, with broader access if needed.
+👉 CampusHire solves this by providing a **unified platform** for both students and recruiters.
 
-## 5. Complete Project Flow
+---
+
+## ✨ Key Features
+
+- Student & Recruiter Authentication (JWT-based)
+- Student Profile Management (resume, skills, academic details)
+- Browse & Filter Jobs (role, location, skills, compensation)
+- Job Application System with duplicate prevention
+- Application Tracking (`Applied → Selected`)
+- Recruiter Dashboard (job posting + applicant review)
+- Real-time Status Updates
+- Responsive UI (Mobile + Desktop)
+
+---
+
+## 👥 User Roles
+
+### 🎓 Student
+- Create profile
+- Browse jobs
+- Apply & track applications
+
+### 🏢 Recruiter
+- Post jobs
+- View applicants
+- Update status
+
+### ⚙️ Admin
+- Extended recruiter capabilities (backend-supported)
+
+---
+
+## 🔄 Project Flow
 
 ### Student Flow
+1. Register / Login  
+2. Complete profile  
+3. Browse jobs  
+4. Apply  
+5. Track status  
 
-1. Register or log in
-2. Complete student profile with branch, graduation year, CGPA, skills, and resume link
-3. Browse jobs and internships
-4. Use filters to narrow down results
-5. Open a job details page
-6. Apply to the job
-7. Track status updates:
-   - Applied
-   - Under Review
-   - Shortlisted
-   - Interview
-   - Rejected
-   - Selected
+### Recruiter Flow
+1. Login  
+2. Post job  
+3. View applicants  
+4. Update status  
+5. Monitor dashboard  
 
-### Recruiter/Admin Flow
+---
 
-1. Log in
-2. Open recruiter dashboard
-3. Create a new job posting
-4. View all posted jobs
-5. Open applicants for a job
-6. Update student application status
-7. Monitor dashboard stats such as total jobs, total applications, shortlisted, and selected candidates
-
-## 6. Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
-
-- React 18
-- React Router DOM
+- React
 - Redux Toolkit
 - Tailwind CSS
 - Axios
-- Lucide React
 
 ### Backend
-
-- Spring Boot 3
-- Spring Web
+- Spring Boot
 - Spring Data JPA
-- Spring Validation
-- PostgreSQL
-- H2 in-memory database fallback for quick local testing
-- JWT based token authentication
-- Maven
+- PostgreSQL / H2
+- JWT Authentication
 
-## 7. System Architecture
+---
 
-CampusHire follows a simple layered architecture:
+## 🧱 Architecture
 
-- React frontend for UI and routing
-- Axios service layer for API communication
-- Spring Boot REST controllers for request handling
-- Service layer for business logic
-- Repository layer for database access
-- PostgreSQL or H2 for persistence
-
-```mermaid
-flowchart LR
-    A["React Frontend"] --> B["Axios API Calls"]
-    B --> C["Spring Boot Controllers"]
-    C --> D["Service Layer"]
-    D --> E["Repository Layer"]
-    E --> F["PostgreSQL / H2 Database"]
 ```
 
-## 8. Backend Modules
+React Frontend
+↓
+Axios API Layer
+↓
+Spring Boot Controllers
+↓
+Service Layer
+↓
+Repository Layer
+↓
+Database (PostgreSQL / H2)
 
-- `UserController`
-  Handles register, login, and current user endpoints.
+```
 
-- `ProfileController`
-  Manages student profile creation and updates.
+---
 
-- `JobController`
-  Supports public job listing, job details, recruiter job creation, update, delete, and recruiter-specific job list.
+## ⚙️ Backend Modules
 
-- `ApplicationController`
-  Handles job application, student application tracking, recruiter applicant listing, and status updates.
+- `UserController` – Auth (login/register)
+- `ProfileController` – Student profile
+- `JobController` – Job operations
+- `ApplicationController` – Apply & tracking
+- `DashboardController` – Stats
 
-- `DashboardController`
-  Returns student and recruiter dashboard statistics.
+---
 
-- `services/*`
-  Contains business logic for authentication, profiles, jobs, applications, and dashboards.
+## 📱 Frontend Pages
 
-- `repositories/*`
-  Handles database access through Spring Data JPA.
+- Home
+- Login / Signup
+- Job Listings
+- Job Details
+- Student Dashboard
+- Recruiter Dashboard
+- Applications Tracker
+- Profile Page
 
-- `utils/*`
-  Includes JWT utility, API exception handling, and global error responses.
+---
 
-## 9. Frontend Pages
+## 🗄️ Database Entities
 
-- `Home`
-  Landing page with project highlights and recruiter-friendly presentation.
+- **User**
+- **Profile**
+- **Job**
+- **Application**
 
-- `LoginPage`
-  Sign-in page for student and recruiter accounts.
+---
 
-- `SignUpPage`
-  Account creation page.
+## 🔗 API Overview
 
-- `FindJobs`
-  Browse and filter openings.
+### Auth
+```
 
-- `JobDetails`
-  Detailed job description with save and apply actions.
+POST /api/auth/register
+POST /api/auth/login
+GET  /api/auth/me
 
-- `StudentDashboardPage`
-  Student overview with stats and recent applications.
-
-- `ApplicationsPage`
-  Full application tracker view.
-
-- `UserProfilePage`
-  Student profile management page.
-
-- `RecruiterDashboardPage`
-  Recruiter overview with job and application stats.
-
-- `PostJobPage`
-  Create or edit a job posting.
-
-- `PostedJobsPage`
-  Manage posted jobs and jump to applicant review.
-
-- `ApplicantsPage`
-  View and update applicants for a specific job.
-
-- `AboutPage`
-  Project summary and problem statement page.
-
-## 10. Database Models / Entities
-
-### `User`
-
-- `id`
-- `name`
-- `email`
-- `password`
-- `accountType`
-- `createdAt`
-- `updatedAt`
-
-### `Profile` (Student Profile)
-
-- `id`
-- `name`
-- `email`
-- `branch`
-- `graduationYear`
-- `cgpa`
-- `skills`
-- `resumeLink`
-- `linkedInUrl`
-- `githubUrl`
-- `headline`
-- `about`
-- `createdAt`
-- `updatedAt`
-- linked `user`
-
-### `Job`
-
-- `id`
-- `title`
-- `company`
-- `location`
-- `jobType`
-- `compensation`
-- `requiredSkills`
-- `description`
-- `deadline`
-- `createdAt`
-- `updatedAt`
-- linked `postedBy`
-
-### `Application`
-
-- `id`
-- linked `studentProfile`
-- linked `job`
-- `status`
-- `appliedAt`
-- `updatedAt`
-
-## 11. API Endpoint Summary
-
-### Authentication
-
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `GET /api/auth/me`
-
-### Student Profile
-
-- `GET /api/students/profile`
-- `PUT /api/students/profile`
+```
 
 ### Jobs
-
-- `GET /api/jobs`
-- `GET /api/jobs/{id}`
-- `GET /api/jobs/mine`
-- `POST /api/jobs`
-- `PUT /api/jobs/{id}`
-- `DELETE /api/jobs/{id}`
-
-### Applications
-
-- `POST /api/applications/jobs/{jobId}`
-- `GET /api/applications/mine`
-- `GET /api/applications/job/{jobId}`
-- `PUT /api/applications/{applicationId}/status`
-
-### Dashboards
-
-- `GET /api/dashboard/student`
-- `GET /api/dashboard/recruiter`
-
-## 12. How to Run the Backend
-
-### Option A: Using Maven Wrapper
-
-```bash
-cd server
-mvnw.cmd spring-boot:run
 ```
 
-### Option B: Using Maven
+GET    /api/jobs
+POST   /api/jobs
+PUT    /api/jobs/{id}
+DELETE /api/jobs/{id}
+
+```
+
+### Applications
+```
+
+POST /api/applications/jobs/{jobId}
+GET  /api/applications/mine
+
+````
+
+---
+
+## 🚀 Running the Project
+
+### Backend
 
 ```bash
 cd server
 mvn spring-boot:run
-```
+````
 
-By default, the backend can start with an H2 in-memory database for quick testing. You can switch to PostgreSQL by setting the environment variables listed below.
-
-## 13. How to Run the Frontend
+### Frontend
 
 ```bash
 cd client
@@ -287,63 +195,62 @@ npm install
 npm run dev
 ```
 
-The frontend runs on:
+---
 
-- `http://localhost:5173`
-
-By default, it expects the backend API at:
-
-- `http://localhost:8080/api`
-
-## 14. Environment Variables Required
+## 🌍 Environment Variables
 
 ### Backend
 
-- `DATABASE_URL`
-  Example: `jdbc:postgresql://localhost:5432/campushire`
-
-- `DATABASE_USERNAME`
-
-- `DATABASE_PASSWORD`
-
-- `JWT_SECRET`
-  A strong secret key used to sign JWT tokens.
-
-- `JWT_EXPIRATION_MS`
-  Optional token expiry in milliseconds.
+```
+DATABASE_URL
+DATABASE_USERNAME
+DATABASE_PASSWORD
+JWT_SECRET
+```
 
 ### Frontend
 
-- `VITE_API_URL`
-  Example: `http://localhost:8080/api`
-
-Note:
-
-- If database variables are not set, the backend falls back to H2 for local demo usage.
-
-## 15. Project Structure
-
-```text
-Job-Application-System/
-├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── redux/
-│   │   ├── services/
-│   │   └── utils/
-│   └── package.json
-├── server/
-│   ├── src/main/java/com/example/kshitiz/server/
-│   │   ├── controllers/
-│   │   ├── dto/
-│   │   ├── entity/
-│   │   ├── repositories/
-│   │   ├── security/
-│   │   ├── services/
-│   │   └── utils/
-│   └── pom.xml
-└── README.md
+```
+VITE_API_URL=http://localhost:8080/api
 ```
 
- 
+---
+
+## 📁 Project Structure
+
+```
+client/
+server/
+README.md
+```
+
+---
+
+## 📸 Screenshots
+
+*Add screenshots here after running locally*
+
+---
+
+## 🔮 Future Improvements
+
+* Email notifications
+* Resume upload feature
+* Pagination & sorting
+* Interview scheduling
+* Admin analytics
+
+---
+
+## 🧾 Resume Summary
+
+Built a **full-stack placement portal** using Spring Boot and React with:
+
+* Role-based workflows
+* Job application system
+* JWT authentication
+* Dashboard analytics
+* Responsive UI
+
+---
+
